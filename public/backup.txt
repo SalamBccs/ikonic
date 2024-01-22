@@ -1,0 +1,1350 @@
+<template>
+    <main>
+
+        <div class="container">
+
+            <div class="account-title match-title">
+                <h4>Game Transfer</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-12 main-b">
+                    <div class="row active-card">
+                        <div class="col-xl-3 col-md-4 col-sm-6">
+                            <div class="card card__one--wrapper text-white mb-4">
+                                <div class="card-body">
+                                    <div class="flex__wrapper-two">
+                                        <div>
+                                            <p class="card-label-one">Available Credit</p>
+                                            <h3 class="card-heading-one">${{ funds }}</h3>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-4 col-sm-6">
+                            <div class="card card__two--wrapper text-white mb-4">
+                                <div class="card-body">
+                                    <div class="flex__wrapper-two">
+                                        <div>
+                                            <p class="card-label-one">Active Offers</p>
+                                            <h3 class="card-heading-one">${{ activeOffersPrice }}</h3>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="active-details">
+
+                        <div class="active-description">
+
+                            <div class="no-match-p method">
+                                <p>If you are a new player please select the platform you wish to play on the drop down
+                                    and check your Game setting tab for login credentials.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- new   section Add  start -->
+                <!-- new   section Add  end -->
+
+                <div class="col-md-12 main-b">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 ">
+
+                            <div class="graph__wrapper-width">
+
+                                <div class="acivity-details">
+                                    <div class="activity-info method-info">
+                                        <div class="activity-shop">
+                                            <div class="activity-name">
+
+
+                                                <fieldset>
+                                                    <div class="some-class">
+
+
+                                                        <h3 style="margin-left:20px;margin-top:-3px;"><b> Deposit</b>
+                                                        </h3>
+
+
+                                                        <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+
+                                                    </div>
+                                                </fieldset>
+
+
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <div class="user_input">
+                                                        <select class="mt-30 w-300" aria-label=".form-select-lg example"
+                                                            v-model="state.Deposit_platform"
+                                                            style="border-radius:40px;margin-top: -5px;width: 270px;height:60px;">
+                                                            <option value="">Select Platform</option>
+                                                            <template v-for="plateform in GameSetting"
+                                                                :key="plateform.id">
+                                                                <option :value="plateform.id">{{ plateform.name }}
+                                                                </option>
+                                                            </template>
+
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="activity-shop">
+
+                                            <div class="activity-name second-input">
+
+                                                <div class="email-feild d-flex flex-wrap w-100"
+                                                    style="margin-top:15px;">
+                                                    <!-- <label for="price"> Amount</label> -->
+
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.Deposit_amount" placeholder="Amount $" required
+                                                        min="1" oninput="this.value =
+     !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null" class="mt-30 w-300">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="activity-shop">
+                                            <div class="activity-name">
+                                                <img @click.prevent="GameTransfer('Deposit')"
+                                                    style="width: 50px;margin-top: 15px;cursor:pointer"
+                                                    src="assets/images/tick-icon.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="activity-info method-info mt-3">
+                                        <div class="activity-shop">
+                                            <div class="activity-name">
+                                                <label style="margin-bottom: 0px !important;">Feeling Generous, Tip to
+                                                    the Staff!! </label>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="activity-shop">
+                                            <div class="activity-name">
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.tipamount" placeholder="Amount $" required
+                                                        min="1" oninput="this.value =
+     !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null" class="mt-30">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="activity-shop">
+                                            <div class="activity-name">
+                                                <img @click.prevent="tip"
+                                                    style="width: 50px;margin-top: 15px;cursor:pointer"
+                                                    src="assets/images/tick-icon.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- new   section Add  start -->
+
+                <div class="col-md-12 main-b payment_new_section mt-5">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 ">
+                            <div class="graph__wrapper-width">
+
+
+                                <table class="table ">
+
+                                    <thead>
+                                        <th style="width: 45%;text-align: left !important;">
+                                            <h5>Withdrawals</h5>
+                                        </th>
+                                        <th style="width: 20%;">
+                                            <div class="th" style="display: flex; flex-direction: column; ">
+                                                <h5> Timeframe</h5>
+                                                <h5> Widthdrawl Limit</h5>
+                                                <b> Frequency</b>
+
+                                            </div>
+
+                                        </th>
+                                        <th>
+                                            <h5>Amount</h5>
+                                        </th>
+                                        <th></th>
+                                    </thead>
+
+<<<<<<< HEAD
+                                <tbody v-for="(user, index) in GameSetting" :key="index">
+                                    <!-- row 1 -->
+                                    <tr>
+                                        <td>
+
+                                            <div class="img_content d-flex align-items-center justify-content-between">
+                                                <div class="img">
+                                                    <h5 >{{ user.name }}</h5>
+                                                    <div id="profile-image">
+                                                    <img src="/assets/images/logo.png" alt="" data-v-5fddf304="" style="height: 39px;">
+                                                </div>
+                                                </div>
+
+                                                <h5 >{{ user.name }}</h5>
+=======
+                                    <tbody>
+                                        <!-- row 1 -->
+                                        <tr>
+                                            <td>
+
+                                                <div
+                                                    class="img_content d-flex align-items-center justify-content-between">
+                                                    <div class="img">
+                                                        <h5>TopSwap</h5>
+                                                        <div id="profile-image">
+                                                            <img src="/assets/images/logo.png" alt="" data-v-5fddf304=""
+                                                                style="height: 39px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <h5>TopSwap</h5>
+
+                                                    <div class="form-group">
+                                                        <select name="" v-model="state.TopSwap_platform" id=""
+                                                            class="form-control">
+                                                            <option value="">
+                                                                Select Platform</option>
+                                                            <template v-for="plateform in GameSetting"
+                                                                :key="plateform.id">
+                                                                <option :value="plateform.id">{{ plateform.name }}
+                                                                </option>
+                                                            </template>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </td>
+                                            <td>
+
+                                                <div class="frequency text-center">
+                                                    <h6>Upto 15 minutes</h6>
+                                                    <h6>$1 to $1000</h6>
+                                                    <h6>$1000 per 24hr</h6>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.TopSwap_amount" placeholder="Amount $" required
+                                                        min="1" oninput="this.value =
+!!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><img @click.prevent="GameTransfer('TopSwap')"
+                                                    src="assets/images/tick-icon.jpg" alt="" data-v-30b51a24=""
+                                                    style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                        </tr>
+
+                                        <!-- row 2  -->
+
+                                        <tr>
+                                            <td>
+
+                                                <div
+                                                    class="img_content d-flex align-items-center justify-content-between">
+                                                    <div class="img">
+                                                        <h5>PayPal</h5>
+                                                        <div id="profile-image">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/174/174861.png"
+                                                                alt="" style="height: 39px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <h5>PayPal</h5>
+
+                                                    <div class="form-group">
+                                                        <select name="" v-model="state.Paypal_platform" id=""
+                                                            class="form-control">
+                                                            <option value="">Select Platform</option>
+                                                            <template v-for="plateform in GameSetting"
+                                                                :key="plateform.id">
+                                                                <option :value="plateform.id">{{ plateform.name }}
+                                                                </option>
+                                                            </template>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </td>
+                                            <td>
+
+                                                <div class="frequency text-center">
+                                                    <h6>Upto 24hr</h6>
+                                                    <h6>$300 to $1500</h6>
+                                                    <h6>1 per 24hr</h6>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.Paypal_amount" placeholder="Amount $" required
+                                                        min="1" oninput="this.value =
+!!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><img @click.prevent="GameTransfer('Paypal')"
+                                                    src="assets/images/tick-icon.jpg" alt=""
+                                                    style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                        </tr>
+
+                                        <!-- row 3  -->
+                                        <tr>
+                                            <td>
+
+                                                <div
+                                                    class="img_content d-flex align-items-center justify-content-between">
+                                                    <div class="img">
+                                                        <h5>CasApp</h5>
+                                                        <div id="profile-image">
+                                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Square_Cash_app_logo.svg/1200px-Square_Cash_app_logo.svg.png"
+                                                                alt="" data-v-5fddf304="" style="height: 39px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <h5>CasApp</h5>
+
+                                                    <div class="form-group">
+                                                        <select name="" v-model="state.CashApp_platform" id=""
+                                                            class="form-control">
+                                                            <option value="">Select Platform</option>
+                                                            <template v-for="plateform in GameSetting"
+                                                                :key="plateform.id">
+                                                                <option :value="plateform.id">{{ plateform.name }}
+                                                                </option>
+                                                            </template>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+>>>>>>> ce03e2489bf19d741b52c38a2edd88090fdd099d
+
+                                            </td>
+                                            <td>
+
+<<<<<<< HEAD
+                                            </div>
+
+
+                                        </td>
+                                        <td>
+
+                                            <div class="frequency text-center">
+                                                <h6>Upto 15 minutes</h6>
+                                                <h6>$1 to $1500</h6>
+                                                <h6>1per  24hour</h6>
+                                            </div>
+                                        </td>
+                                        <td class="text-center"> Amount</td>
+                                        <td class="text-center"><img src="assets/images/tick-icon.jpg" alt="" data-v-30b51a24="" style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                    </tr>
+
+
+
+                                </tbody>
+                                    <!-- total result row  -->
+
+                                    <tr>
+                                        <td>Player Transfer Upto 15 minutes  1per 24hour</td>
+
+                                        <td>$1 to $1500</td>
+                                        <td>Amount</td>
+                                        <td class="text-center"><img src="assets/images/tick-icon.jpg" alt="" data-v-30b51a24="" style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                    </tr>
+                               </table>
+=======
+                                                <div class="frequency text-center">
+                                                    <h6>Upto 24hr</h6>
+                                                    <h6>$300 to $1500</h6>
+                                                    <h6>1 per 24hr</h6>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.CashApp_amount" placeholder="Amount $" required
+                                                        min="1" oninput="this.value =
+!!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><img @click.prevent="GameTransfer('CashApp')"
+                                                    src="assets/images/tick-icon.jpg" alt="" data-v-30b51a24=""
+                                                    style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                        </tr>
+
+
+                                        <!-- tr 4  -->
+
+                                        <tr>
+                                            <td>
+
+                                                <div
+                                                    class="img_content d-flex align-items-center justify-content-between">
+                                                    <div class="img">
+                                                        <h5>Ethereum</h5>
+                                                        <div id="profile-image">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/1777/1777889.png"
+                                                                alt="" data-v-5fddf304="" style="height: 39px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <h5>Ethereum</h5>
+
+                                                    <div class="form-group">
+                                                        <select name="" v-model="state.Ethereum_platform" id=""
+                                                            class="form-control">
+                                                            <option value="">Select Platform</option>
+                                                            <template v-for="plateform in GameSetting"
+                                                                :key="plateform.id">
+                                                                <option :value="plateform.id">{{ plateform.name }}
+                                                                </option>
+                                                            </template>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </td>
+                                            <td>
+
+                                                <div class="frequency text-center">
+                                                    <h6>Upto 24hr</h6>
+                                                    <h6>$300 to $2500</h6>
+                                                    <h6>1 per 24hr</h6>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.Ethereum_amount" placeholder="Amount $" required
+                                                        min="1" oninput="this.value =
+!!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="text" name="price" id="price"
+                                                        v-model="state.Ethereum_address" placeholder="Ethereum Address">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><img src="assets/images/tick-icon.jpg" alt=""
+                                                    @click.prevent="GameTransfer('Ethereum')"
+                                                    style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                        </tr>
+
+                                        <!-- row 5  -->
+
+                                        <tr>
+                                            <td>
+
+                                                <div
+                                                    class="img_content d-flex align-items-center justify-content-between">
+                                                    <div class="img">
+                                                        <h5>BitCoin </h5>
+                                                        <div id="profile-image">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/825/825540.png"
+                                                                alt="" data-v-5fddf304="" style="height: 39px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <h5>BitCoin </h5>
+
+                                                    <div class="form-group">
+                                                        <select name="" v-model="state.BitCoin_platform" id=""
+                                                            class="form-control">
+                                                            <option value="">Select Platform</option>
+                                                            <template v-for="plateform in GameSetting"
+                                                                :key="plateform.id">
+                                                                <option :value="plateform.id">{{ plateform.name }}
+                                                                </option>
+                                                            </template>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </td>
+                                            <td>
+
+                                                <div class="frequency text-center">
+                                                    <h6>Upto 24hr</h6>
+                                                    <h6>$300 to $2500</h6>
+                                                    <h6>1 per 24hr</h6>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.BitCoin_amount" placeholder="Amount $" required
+                                                        min="1" oninput="this.value =
+!!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="text" name="price" id="price"
+                                                        v-model="state.BitCoin_address" placeholder="BTC Address">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><img @click.prevent="GameTransfer('BitCoin')" src="assets/images/tick-icon.jpg" alt=""
+                                                    data-v-30b51a24=""
+                                                    style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                        </tr>
+
+                                        <!-- total result row  -->
+
+                                        <tr>
+                                            <td>Player Transfer Upto 15 minutes 1per 24hr</td>
+
+                                            <td>$1 to $1500</td>
+                                            <td>
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="number" name="price" id="price"
+                                                        v-model="state.Player_Transfer_amount" placeholder="Amount $"
+                                                        required min="1" oninput="this.value =
+!!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+
+                                                <div class="email-feild d-flex flex-wrap w-100">
+                                                    <!-- <label for="price"> Amount</label> -->
+                                                    <input type="text" name="price" id="price"
+                                                        v-model="state.Player_Transfer_username"
+                                                        placeholder="Player Username">
+
+                                                    <div class="icon"><img :src="'images/user.png'" alt=""></div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><img src="assets/images/tick-icon.jpg" alt=""
+                                                    @click.prevent="GameTransfer('Player_Transfer')"
+                                                    style="width: 50px; margin-top: 15px; cursor: pointer;"></td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+
+>>>>>>> ce03e2489bf19d741b52c38a2edd88090fdd099d
+
+
+
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- new   section Add  end -->
+
+                <div class="col-md-12 main-b">
+                    <div class="row">
+
+                        <div class="col-xl-12 col-md-12 ">
+                            <div class="active-title-2">
+                                <h1>Activity</h1>
+                            </div>
+                            <div class="over-flow">
+                                <div class="graph__wrapper-width table-over" data-order='[[ 0, "desc" ]]'>
+                                    <div class="hide-cancel">
+                                        <div class="hide-detail">
+                                            <input v-model="checked" type="checkbox" value="1">
+                                            <p>Hide canceled Transfers</p>
+
+                                            <!-- <input type="checkbox" v-model="checked" value="2"  style="margin-left:40px;">
+                          <p>Trade in Process</p> -->
+                                        </div>
+
+                                    </div>
+
+                                    <div v-for="history in History.data" :key="history.id" class="acivity-details">
+                                        <div class="activity-info">
+                                            <div class="activity-shop">
+                                                <div class="activity-name" v-if="history.transfer_type == 'Deposit' | history.transfer_type == 'Tip'">
+                                                    Deposit
+                                                </div>
+                                                <div class="activity-name" v-else>
+                                                    Withdrawal
+                                                </div>
+                                            </div>
+                                            <div class="activity-shop">
+                                                <div class="activity-icon" v-if="history.transfer_type != 'Deposit' & history.transfer_type != 'Tip'"><i aria-hidden="true"
+                                                        class="fa fa-shopping-cart"></i></div>
+                                                <div class="activity-name" v-if="history.transfer_type == 'Deposit'">
+                                                    {{ history.plateform.name }}
+                                                </div>
+                                                <div class="activity-name" v-else>{{ history.transfer_type }}</div>
+                                            </div>
+                                            <div class="activity-shop">
+                                                <div class="activity-date">{{
+                                                    $moment(history.created_at).format("YYYY.MM.DD")
+                                                }}
+                                                </div>
+                                                <div class="activity-time">{{
+                                                    $moment(history.created_at).format("hh:mm a")
+                                                }}
+                                                </div>
+                                            </div>
+                                            <div class="activity-shop">
+                                                <div class="acivity-price">${{ history.amount }}</div>
+                                                <!-- <div class="activity-next-icon"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div> -->
+                                            </div>
+                                            <div class="activity-shop">
+                                                <div class="acivity-price">{{ history.status }}</div>
+                                                <!-- <div class="activity-next-icon"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <nav aria-label="...">
+                                        <ul class="pagination justify-content-end mt-3">
+                                            <template v-for="link in History.links" v-if="History.total > 0">
+                                                <li :class="[(link.active) ? 'active' : '', (link.url == null) ? 'disabled' : '', 'page-item']"
+                                                    @click.prevent="list(link.url)" :data-label="link.label"
+                                                    style="cursor:pointer" aria-current="page">
+                                                    <span class="page-link" v-html="link.label"></span>
+                                                </li>
+                                            </template>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+</template>
+
+<script>
+import useVuelidate from "@vuelidate/core";
+import {
+    useRouter,
+    useRoute
+} from 'vue-router'
+import {
+    ref,
+    reactive,
+    computed,
+    onMounted,
+    watch
+} from "vue";
+
+import {
+    required,
+    helpers
+} from "@vuelidate/validators";
+import store from '../../stores'
+import app from '../../firebase'
+import {
+    getDatabase,
+    ref as storageRef,
+    set,
+    remove,
+    push,
+    onValue
+} from "firebase/database";
+
+<<<<<<< HEAD
+    export default {
+        name: 'BuyCredits',
+        setup(props, {
+            emit
+        }) {
+            const path = ref('match-offers')
+            const transfertype = ref('from_game')
+            const route = useRoute()
+            const user = reactive(store.getters["auth/currentUser"])
+            const router = useRouter()
+            const state = reactive({
+                tgaccount: '',
+                tgamount: '',
+                fgaccount: '',
+                fgamount: '',
+                saccount: '',
+                raccount: '',
+                ptpamount: '',
+                ftgsetting: '',
+                ftaccount :'',
+                tipamount : '',
+                ftamount: '',
+            })
+            const db = getDatabase()
+            const activeOffersPrice = ref(0.0);
+            const GameSetting = ref([]);
+            const Games = ref([]);
+            const funds = ref(0.0);
+            const currentuser = reactive(store.getters["auth/currentUser"])
+
+            const rules1 = {
+                tgaccount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+                tgamount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+            }
+
+            const rules2 = {
+                fgaccount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+                fgamount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+            }
+
+            const rules3 = {
+                saccount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+                raccount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+                ptpamount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+            }
+
+            const rules4 = {
+                ftgsetting: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+                ftaccount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+                ftamount: {
+                    required: helpers.withMessage('This field is required', required),
+                },
+            }
+
+            const v1$ = useVuelidate(rules1, state)
+
+            const v2$ = useVuelidate(rules2, state)
+
+            const v3$ = useVuelidate(rules3, state)
+            const v4$ = useVuelidate(rules4, state)
+
+            onMounted(() => {
+                if (currentuser.is_phone_verified === 0) {
+                    router.push('/verify/phone')
+                } else if (currentuser.is_email_verified === 0) {
+                    router.push('/verify/email')
+                } else {
+                    getOffersPrice();
+                    getFunds();
+                    getGameSetting();
+                      getGames();
+                    onValue(storageRef(db, 'amount_transfer/' + user.id), (snapshot) => {
+                        if (snapshot.exists()) {
+                            remove(storageRef(db, 'amount_transfer/' + user.id))
+                            getOffersPrice();
+                            getFunds();
+                        }
+                    })
+                }
+            })
+
+            const getOffersPrice = async () => {
+
+                await axios.post('active_offers')
+                    .then((response) => {
+
+                        activeOffersPrice.value = response.data;
+                    })
+            }
+            const getGameSetting = async () => {
+
+                await axios.get('getPlateforms')
+                    .then((response) => {
+
+                        GameSetting.value = response.data.plateforms;
+                    })
+            }
+            const getGames = async () => {
+
+                await axios.get('api/method/index')
+                    .then((response) => {
+                        console.log(response);
+                        Games.value = response.data.record;
+console.log(response.data.record);
+                    })
+            }
+            const getFunds = async () => {
+
+                await axios.get('get-funds')
+                    .then((response) => {
+                        funds.value = response.data;
+                    })
+            }
+
+            const toGame = async () => {
+                const data = {
+                    'game_id': state.tgaccount,
+                    'amount': state.tgamount,
+                    'transfer_type': 'from_game'
+                }
+                await axios.post('api/amount/transfer', data).then((result) => {
+                    if (result.data.success == true) {
+                        state.tgaccount = '',
+                            state.tgamount = '',
+                            getOffersPrice();
+                        getFunds();
+                        Toast.fire({
+                            text: result.data.message,
+                            timer: 5000,
+                            icon: 'success',
+                            position: 'top-end',
+                        });
+                        set(push(storageRef(db, 'transfer_request')), {
+                            response: 0
+                        })
+                    } else {
+                        Toast.fire({
+                            text: result.data.message,
+                            timer: 5000,
+                            icon: 'error',
+                            position: 'top-end',
+                        });
+                    }
+                })
+
+            }
+
+
+
+
+            const tip  = async () => {
+                const data = {
+
+                    'amount': state.tipamount,
+                    'transfer_type': 'tip'
+                }
+                await axios.post('api/amount/tip', data).then((result) => {
+                    if (result.data.success == true) {
+
+                            state.tipamount = '',
+                            getOffersPrice();
+                        getFunds();
+                        Toast.fire({
+                            text: result.data.message,
+                            timer: 5000,
+                            icon: 'success',
+                            position: 'top-end',
+                        });
+                        set(push(storageRef(db, 'transfer_request')), {
+                            response: 0
+                        })
+                    } else {
+                        Toast.fire({
+                            text: result.data.message,
+                            timer: 5000,
+                            icon: 'error',
+                            position: 'top-end',
+                        });
+                    }
+                })
+
+            }
+
+            const fromGame = async () => {
+
+                const data = {
+                    'game_id': state.fgaccount,
+                    'amount': state.fgamount,
+
+                    'transfer_type': transfertype.value,
+
+                }
+
+                console.log(data);
+                await axios.post('api/amount/transfer', data).then((result) => {
+                    if (result.data.success == true) {
+                        state.fgaccount = '',
+                            state.fgamount = '',
+
+                            getOffersPrice();
+                        getFunds();
+                        Toast.fire({
+                            text: result.data.message,
+                            timer: 5000,
+                            icon: 'success',
+                            position: 'top-end',
+                        });
+                        set(push(storageRef(db, 'transfer_request')), {
+                            response: 0
+                        })
+                    } else {
+                        Toast.fire({
+                            text: result.data.message,
+                            timer: 5000,
+                            icon: 'error',
+                            position: 'top-end',
+                        });
+                    }
+                })
+
+            }
+
+            const ptpGame = async () => {
+
+    const data = {
+        'sender_game_id': state.saccount,
+        'receiver_game_id': state.raccount,
+        'amount': state.ptpamount,
+        'transfer_type': 'player_to_player'
+    }
+    await axios.post('api/amount/transfer', data).then((result) => {
+        if (result.data.success == true) {
+            state.saccount = '',
+                state.raccount = '',
+                state.ptpamount = '',
+=======
+export default {
+    name: 'BuyCredits',
+    setup(props, {
+        emit
+    }) {
+        const path = ref('match-offers')
+        const transfertype = ref('from_game')
+        const route = useRoute()
+        const checked = ref([])
+        const user = reactive(store.getters["auth/currentUser"])
+        const router = useRouter()
+        const state = reactive({
+            Deposit_platform: '',
+            Deposit_amount: '',
+            TopSwap_platform: '',
+            TopSwap_amount: '',
+            Paypal_platform: '',
+            Paypal_amount: '',
+            CashApp_platform: '',
+            CashApp_amount: '',
+            Ethereum_platform: '',
+            Ethereum_amount: '',
+            Ethereum_address: '',
+            BitCoin_platform: '',
+            BitCoin_amount: '',
+            BitCoin_address: '',
+            Player_Transfer_username: '',
+            Player_Transfer_amount: '',
+            tipamount: '',
+        })
+        const db = getDatabase()
+        const activeOffersPrice = ref(0.0);
+        const GameSetting = ref([]);
+        const History = ref([]);
+        const funds = ref(0.0);
+        const cancel = ref(false);
+        const currentuser = reactive(store.getters["auth/currentUser"])
+
+        onMounted(() => {
+            if (currentuser.is_phone_verified === 0) {
+                router.push('/verify/phone')
+            } else if (currentuser.is_email_verified === 0) {
+                router.push('/verify/email')
+            } else {
+>>>>>>> ce03e2489bf19d741b52c38a2edd88090fdd099d
+                getOffersPrice();
+                getFunds();
+                getGameSetting();
+                list()
+                if(window.location.pathname == '/transfer-amount')
+                onValue(storageRef(db, 'amount_transfer/' + user.id), (snapshot) => {
+                    if (snapshot.exists()) {
+                        remove(storageRef(db, 'amount_transfer/' + user.id))
+                        getOffersPrice();
+                        getFunds();
+                        list()
+                    }
+                })
+            }
+        })
+
+        const getOffersPrice = async () => {
+
+            await axios.post('active_offers')
+                .then((response) => {
+
+                    activeOffersPrice.value = response.data;
+                })
+        }
+        const getGameSetting = async () => {
+
+            await axios.get('getPlateforms')
+                .then((response) => {
+
+                    GameSetting.value = response.data.plateforms;
+                })
+        }
+
+        watch(checked, (newVal, oldVal) => {
+            if (newVal == 1) {
+                cancel.value = true
+                list()
+            } else {
+                cancel.value = false
+                list()
+            }
+        })
+
+        const list = async (url = '') => {
+            if(url == '')
+            {
+                if(cancel.value == false)
+                url = 'getUserTransferHistory/all?page=1';
+                else
+                url = 'getUserTransferHistory/cancel?page=1';
+            }
+            await axios.get(url)
+                .then((response) => {
+                    //(response.data.history)
+                    History.value = response.data.transfers;
+                })
+        }
+
+        const getFunds = async () => {
+
+            await axios.get('get-funds')
+                .then((response) => {
+                    funds.value = response.data;
+                })
+        }
+
+        const tip = async () => {
+            const data = {
+
+                'amount': state.tipamount,
+                'transfer_type': 'Tip'
+            }
+            await axios.post('amount/tip', data).then((result) => {
+                if (result.data.success == true) {
+
+                    state.tipamount = '',
+                        getOffersPrice();
+                    getFunds();
+                    list()
+                    Toast.fire({
+                        text: result.data.message,
+                        timer: 5000,
+                        icon: 'success',
+                        position: 'top-end',
+                    });
+                    set(push(storageRef(db, 'transfer_request')), {
+                        response: 0
+                    })
+                } else {
+                    Toast.fire({
+                        text: result.data.message,
+                        timer: 5000,
+                        icon: 'error',
+                        position: 'top-end',
+                    });
+                }
+            })
+        }
+
+        const GameTransfer = async (transfertype) => {
+
+            const data = {
+                'game_id': state[transfertype + '_platform'],
+                'amount': state[transfertype + '_amount'],
+                'Player_Transfer_username': state[transfertype + '_username'],
+                'transfer_type': transfertype,
+            }
+            data[transfertype + '_address'] = state[transfertype + '_address']
+
+            await axios.post('amount/transfer', data).then((result) => {
+                if (result.data.success == true) {
+                    state.Deposit_platform = '';
+                    state.Deposit_amount = '';
+                    state.TopSwap_platform = '';
+                    state.TopSwap_amount = '';
+                    state.Paypal_platform = '';
+                    state.Paypal_amount = '';
+                    state.CashApp_platform = '';
+                    state.CashApp_amount = '';
+                    state.Ethereum_platform = '';
+                    state.Ethereum_amount = '';
+                    state.Ethereum_address = '';
+                    state.BitCoin_platform = '';
+                    state.BitCoin_amount = '';
+                    state.BitCoin_address = '';
+                    state.Player_Transfer_username = '',
+                    state.Player_Transfer_amount = '',
+                    state.tipamount = '',
+
+                        getOffersPrice();
+                    getFunds();
+                    list()
+                    Toast.fire({
+                        text: result.data.message,
+                        timer: 5000,
+                        icon: 'success',
+                        position: 'top-end',
+                    });
+                    set(push(storageRef(db, 'transfer_request')), {
+                        response: 0
+                    })
+                } else {
+                    Toast.fire({
+                        text: result.data.message,
+                        timer: 5000,
+                        icon: 'error',
+                        position: 'top-end',
+                    });
+                }
+            })
+
+        }
+
+
+        return {
+            state,
+            GameTransfer,
+            tip,
+            activeOffersPrice,
+            funds,
+            GameSetting,
+            transfertype,
+            History,
+            list,
+            checked
+        }
+    },
+
+}
+</script>
+
+<style scoped>
+.email-feild {
+    display: flex;
+    position: relative;
+    padding: 0px 0px 15px;
+}
+
+.email-feild input {
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid rgb(241, 238, 238);
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.w-300 {
+    width: 300px;
+}
+
+.second-input input {
+    margin-top: 8px !important;
+}
+
+.user_input select {
+
+    height: unset !important;
+    padding: 10px !important;
+}
+
+@media (max-width:767px) {
+    .activity-info {
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .activity-shop {
+        width: 100% !important;
+    }
+
+    .activity-name {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .activity-name img {
+        margin-bottom: 5px;
+    }
+
+    .email-feild {
+        width: 100% !important;
+    }
+
+    .user_input {
+        width: 100% !important;
+    }
+
+    .user_input select {
+        width: 100% !important;
+
+    }
+
+    .email-feild input {
+        width: 100% !important;
+
+    }
+}
+
+@media (max-width: 1130px) {
+
+    .w-300 {
+        width: 130px !important;
+    }
+}
+
+@media (max-width:1350px) {
+    .second-input span {
+        font-size: 11px !important;
+        margin-top: -30px !important;
+    }
+}
+
+
+
+
+fieldset {
+    overflow: hidden
+}
+
+.some-class {
+    float: left;
+    clear: none;
+}
+
+label {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+}
+
+input[type=radio],
+input.radio {
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+}
+
+.mid-shop {
+    width: 38%;
+}
+
+.email-feild {
+    width: 100% !important;
+}
+
+.user_input {
+    width: 100% !important;
+}
+
+.activity-name {
+    width: 100% !important;
+}
+
+.form-group select {
+    border-radius: 30px;
+    padding: 10px;
+    height: auto;
+}
+</style>

@@ -1,0 +1,416 @@
+[33mcommit 21320381732b60654f88f046fd34081c48b60ffc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Mon Jun 20 14:16:27 2022 +0500
+
+    my-code
+
+[33mcommit a01da359651f8b2e0b24adde5d011edf139256ac[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 40b8c62 8f955e5
+Author: mailsicoding <78994703+mailsicoding@users.noreply.github.com>
+Date:   Thu Jun 16 22:09:17 2022 +0500
+
+    Merge pull request #19 from waseem590/kamran
+    
+    Kamran
+
+[33mcommit 8f955e574b4538eed430950f5741f5d6593d3935[m[33m ([m[1;31morigin/kamran[m[33m)[m
+Merge: d7cf342 40b8c62
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 16 22:08:13 2022 +0500
+
+    Merge branch 'main' of https://github.com/waseem590/christopher_game into kamran
+
+[33mcommit d7cf342cd0234e733e5a35eef4dcea6892ee4e50[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 16 22:08:06 2022 +0500
+
+    Offer and Auth Apiss Completed
+
+[33mcommit 40b8c62ae541a689279d79498e601e5a9d322963[m
+Merge: 7f24a70 ef13cc1
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Thu Jun 16 21:14:01 2022 +0500
+
+    Merge pull request #18 from waseem590/kamran
+    
+    Kamran
+
+[33mcommit ef13cc18c5efee6880a2b1ffb632304a62a1187b[m
+Merge: 463b43c 7f24a70
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 16 21:13:15 2022 +0500
+
+    Offer and Auth Apis Completed
+
+[33mcommit 463b43c01a2b4bb5a5adbd6a3827644b54c9c605[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 16 21:11:28 2022 +0500
+
+    Offer and Auth Apis Completed
+
+[33mcommit 7f24a7057095b1160d0ca308e041755e65a632f9[m
+Merge: 21205e0 24d3140
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Thu Jun 16 15:38:35 2022 +0500
+
+    Merge pull request #17 from waseem590/waseem
+    
+    Waseem
+
+[33mcommit 24d3140f3938fe545c6d24a9dee3f4bfd1905017[m[33m ([m[1;31morigin/waseem[m[33m)[m
+Merge: ecb9d2f 21205e0
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Thu Jun 16 15:38:11 2022 +0500
+
+    changes
+
+[33mcommit ecb9d2f3de2d04eb3987ce084a0e9ea54a06e1af[m
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Thu Jun 16 15:32:29 2022 +0500
+
+    delet app.js
+
+[33mcommit cdf78e7e10b3e7e0660d848aca525dbf86781387[m
+Merge: 096d1f7 9128203
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Thu Jun 16 15:30:49 2022 +0500
+
+    correction
+
+[33mcommit 21205e0952797cf4dfd06f0b00ad066d1bebaad9[m
+Merge: 9128203 575115f
+Author: mailsicoding <78994703+mailsicoding@users.noreply.github.com>
+Date:   Thu Jun 16 15:30:06 2022 +0500
+
+    Merge pull request #16 from waseem590/faisal
+    
+    sms change
+
+[33mcommit 096d1f72b4e540a197e725f369adcf4a316dfada[m
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Thu Jun 16 15:28:02 2022 +0500
+
+    toater in login and signup
+
+[33mcommit 575115fb8167c5a6796bf9c9a82cc4e69dcbd76b[m[33m ([m[1;31morigin/faisal[m[33m)[m
+Merge: f80acaa 9128203
+Author: FaisalAhsan2040 <faisalehsan2040@gmail.com>
+Date:   Thu Jun 16 15:20:08 2022 +0500
+
+    sms
+
+[33mcommit f80acaa4bc71b0eef667ed5fc9a69fac1a27eea8[m
+Author: FaisalAhsan2040 <faisalehsan2040@gmail.com>
+Date:   Thu Jun 16 15:13:01 2022 +0500
+
+    sms change
+
+[33mcommit 91282037f8dc160054d6f91b2a95296d2b0025ba[m
+Merge: 3d03992 af927a6
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Thu Jun 16 15:06:39 2022 +0500
+
+    Merge pull request #15 from waseem590/kamran
+    
+    Kamran
+
+[33mcommit af927a66c2a447fefc5d546a4baced837f8231ed[m
+Merge: cea21d8 3d03992
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 16 15:02:01 2022 +0500
+
+    Merge branch 'main' of https://github.com/waseem590/christopher_game into kamran
+
+[33mcommit cea21d849628e4a2d87fb498a93a43a29e39d34e[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 16 15:01:44 2022 +0500
+
+    offer creation completed
+
+[33mcommit 6d9c7b9ae1c04dc22b1c444a439f05feb808c1d2[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 16 15:00:47 2022 +0500
+
+    offer creation completed
+
+[33mcommit 3d03992b88397e7825c511732e6dbe23110c21d6[m
+Merge: d0b51fb ad9aa25
+Author: mailsicoding <78994703+mailsicoding@users.noreply.github.com>
+Date:   Wed Jun 15 13:19:17 2022 +0500
+
+    Merge pull request #14 from waseem590/kamran
+    
+    Kamran
+
+[33mcommit ad9aa2570a1ff5afb6cfe38ec2ef76a7b2b9b822[m
+Merge: 12a0eea d0b51fb
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Wed Jun 15 13:16:32 2022 +0500
+
+    chat functionl
+
+[33mcommit 12a0eea12af514b0095f233c49645e2a36e737d5[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Wed Jun 15 13:15:10 2022 +0500
+
+    chat functionl
+
+[33mcommit d0b51fb969d1a45b02db7c584eb54668b0f51f32[m
+Merge: 1561c4c 733368f
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Wed Jun 15 13:13:01 2022 +0500
+
+    Merge pull request #13 from waseem590/waseem
+    
+    Waseem
+
+[33mcommit 733368f5dc2b3fe02dd8e9e41c72af2f82ff925e[m
+Merge: 860cd8e 1561c4c
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Wed Jun 15 13:11:45 2022 +0500
+
+    my
+
+[33mcommit 860cd8e8eec231d74651f7f5dbb28230ad88ef32[m
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Tue Jun 14 13:23:04 2022 +0500
+
+    my changes waseem
+
+[33mcommit 1561c4cacfd28a623f560c0f0816a9d416d964a8[m
+Merge: cc0e3bf 19f52f2
+Author: Hassan Raza <82774274+Haxxan-raza@users.noreply.github.com>
+Date:   Mon Jun 13 22:04:59 2022 +0500
+
+    Merge pull request #12 from waseem590/Haxxan
+    
+    Haxxan
+
+[33mcommit 19f52f2a2fea3e0ea26fd263cbbcad4ab99fd6f4[m[33m ([m[1;31morigin/Haxxan[m[33m)[m
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Mon Jun 13 22:03:14 2022 +0500
+
+    working offers
+
+[33mcommit 1b8e7f9ab90d339107a4c3596974d6056691808d[m
+Merge: 69f6575 ffa359c
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Mon Jun 13 13:34:33 2022 +0500
+
+    my upload
+
+[33mcommit 69f6575ed5f2b0e67a6c956f79fef33cadcce04b[m
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Mon Jun 13 13:31:25 2022 +0500
+
+    my code
+
+[33mcommit 0596268677dab23faeec600bb2c62f105d436ef3[m
+Merge: 8943911 ffa359c
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Fri Jun 10 17:58:46 2022 +0500
+
+    Merge branch 'main' of https://github.com/waseem590/christopher_game into Haxxan
+
+[33mcommit 89439111b02a6497742d28b8d39cf9b9081324ce[m
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Fri Jun 10 17:58:25 2022 +0500
+
+    offers
+
+[33mcommit ffa359c3c85605108ae5e3c4f9f38b459ce4a502[m
+Merge: ff637f9 00b7fa7
+Author: Hassan Raza <82774274+Haxxan-raza@users.noreply.github.com>
+Date:   Fri Jun 10 17:57:57 2022 +0500
+
+    Merge pull request #11 from waseem590/kamran
+    
+    logout dropdown
+
+[33mcommit 00b7fa73062266573b5240ff8ca3e431b272639e[m
+Merge: 49669b2 ff637f9
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Fri Jun 10 17:57:25 2022 +0500
+
+    logout dropdown
+
+[33mcommit 49669b237e71105154ac49e9955d4184d73d5de2[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Fri Jun 10 17:51:09 2022 +0500
+
+    logout dropdown
+
+[33mcommit ff637f9cd41408ea16924746db40a1180e7c4006[m
+Merge: d6658b9 e79b45a
+Author: Hassan Raza <82774274+Haxxan-raza@users.noreply.github.com>
+Date:   Fri Jun 10 17:47:41 2022 +0500
+
+    Merge pull request #10 from waseem590/Haxxan
+    
+    Haxxan
+
+[33mcommit e79b45a8537f12ad89e05dc6b537220df9b477a4[m
+Merge: 4de60fa d6658b9
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Fri Jun 10 17:45:41 2022 +0500
+
+    login details
+
+[33mcommit 4de60fa6031d213ff1c5b5b8f5eb8bbc56bbfffe[m
+Merge: 538b0c1 857126c
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Thu Jun 9 13:39:14 2022 +0500
+
+    pull
+
+[33mcommit d6658b9b599e9c09df390d681983c08a924ec260[m
+Merge: 857126c 2a5c5a6
+Author: mailsicoding <78994703+mailsicoding@users.noreply.github.com>
+Date:   Thu Jun 9 13:39:02 2022 +0500
+
+    Merge pull request #9 from waseem590/kamran
+    
+    Kamran
+
+[33mcommit 2a5c5a6063d4f234f9be3fc93994c8d4f4170d8c[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Thu Jun 9 13:37:26 2022 +0500
+
+    forget working
+
+[33mcommit 538b0c1480459e60b07ce04d12b501e0b65d7113[m
+Merge: 5344526 5ce6502
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Thu Jun 9 13:04:45 2022 +0500
+
+    pull
+
+[33mcommit 17d80cfdecefaccaf827ab8590c32762b1fd8d56[m
+Merge: 5d2bd7b 857126c
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Wed Jun 8 20:15:33 2022 +0500
+
+    forget
+
+[33mcommit 5d2bd7b3beff1b51ccdb23850dbdbc6e422606a5[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Wed Jun 8 20:07:20 2022 +0500
+
+    forget
+
+[33mcommit 857126ca670762016ef3839a45cf2e6b5999f281[m
+Merge: 5ce6502 42ce6d1
+Author: mailsicoding <78994703+mailsicoding@users.noreply.github.com>
+Date:   Wed Jun 8 20:05:46 2022 +0500
+
+    Merge pull request #8 from waseem590/Faisal
+    
+    latest forget
+
+[33mcommit 42ce6d120f5c570dd6dd743a9b3741ef242c5f3d[m
+Author: FaisalAhsan2040 <faisalehsan2040@gmail.com>
+Date:   Wed Jun 8 20:04:33 2022 +0500
+
+    latest forget
+
+[33mcommit 5344526c683bae88ad69e1675aa9afd38fc23e71[m
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Wed Jun 8 16:53:47 2022 +0500
+
+    login
+
+[33mcommit 5ce6502f5cc33989972e5e491a3e00e75ede7a1c[m
+Merge: 28c31ee c87f838
+Author: mailsicoding <78994703+mailsicoding@users.noreply.github.com>
+Date:   Wed Jun 8 16:52:58 2022 +0500
+
+    Merge pull request #7 from waseem590/kamran
+    
+    Kamran
+
+[33mcommit c87f8387e23e0bc7f13fef528b23ef01aa4370e4[m
+Merge: 459ee11 28c31ee
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Wed Jun 8 16:50:53 2022 +0500
+
+    Merge branch 'main' of https://github.com/waseem590/christopher_game into kamran
+
+[33mcommit 459ee11ca00957dc0a35cd877a1aaeb9b7cbf5af[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Wed Jun 8 16:50:45 2022 +0500
+
+    vuex implemented
+
+[33mcommit 28c31ee3fffbd69c8418240dacdbf67ba4b7fdaf[m
+Merge: d9c1d80 d05af67
+Author: Hassan Raza <82774274+Haxxan-raza@users.noreply.github.com>
+Date:   Wed Jun 8 16:29:10 2022 +0500
+
+    Merge pull request #6 from waseem590/kamran
+    
+    vuex implemented
+
+[33mcommit d05af67f1000d64c15b027cea44c429f51337ab7[m
+Author: Kamran -Waris <mianwarissb@gmail.com>
+Date:   Wed Jun 8 16:24:21 2022 +0500
+
+    vuex implemented
+
+[33mcommit d9c1d80c91a5452806023272cac83bb8755b3324[m
+Merge: 491177a bdfae8a
+Author: Hassan Raza <82774274+Haxxan-raza@users.noreply.github.com>
+Date:   Wed Jun 8 14:15:45 2022 +0500
+
+    Merge pull request #5 from waseem590/Haxxan
+    
+    auth
+
+[33mcommit bdfae8af516eb10c2a23661e3cd39e0e6926a143[m
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Wed Jun 8 14:13:54 2022 +0500
+
+    auth
+
+[33mcommit 491177a506d1b849b442dd00713e1242440eeebe[m
+Merge: a35c3af d8dde2d
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Tue Jun 7 13:16:37 2022 +0500
+
+    Merge pull request #3 from waseem590/waseem
+    
+    Waseem
+
+[33mcommit d8dde2d30f4070666a764c9a9e78af4d8c9ad8f6[m
+Merge: b50178d a35c3af
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Tue Jun 7 13:15:38 2022 +0500
+
+    t
+
+[33mcommit b50178df5f19e85c1f603131b790f8ad760419ff[m
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Tue Jun 7 13:13:17 2022 +0500
+
+    test
+
+[33mcommit a35c3affe14d081384e1f844ff377516209cc56e[m
+Merge: e87259a 320e5ec
+Author: waseem590 <52281519+waseem590@users.noreply.github.com>
+Date:   Mon Jun 6 22:03:26 2022 +0500
+
+    Merge pull request #2 from waseem590/Haxxan
+    
+    Haxxan
+
+[33mcommit 320e5ec4a12abf9190f2d66c248ac5701dd2b5ec[m
+Merge: ef375c6 e87259a
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Mon Jun 6 22:02:38 2022 +0500
+
+    Merge branch 'main' of https://github.com/waseem590/christopher_game into Haxxan
+
+[33mcommit ef375c662436354a416a23df0f83209664fea920[m
+Author: Haxxan-raza <hassi5466@gmail.com>
+Date:   Mon Jun 6 22:02:18 2022 +0500
+
+    login validation

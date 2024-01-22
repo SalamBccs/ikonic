@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+        <!-- ************************************************************************ !-->
+    <!-- *****                                                              ***** !-->
+    <!-- *****       ¤ Designed and Developed by  LEADconcept               ***** !-->
+    <!-- *****               http://www.leadconcept.com                     ***** !-->
+    <!-- *****                                                              ***** !-->
+    <!-- ************************************************************************ !-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- <link
+      href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+<style>
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:9999999;
+}
+.loader {
+  display: inline-block;
+  position: relative;
+  top: 5%;                      
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+  <body>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+<!-- <div class="alert alert-success fade in alert-dismissible show" style="margin-top:18px;">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true" style="font-size:20px">×</span>
+  </button>    <strong>Success!</strong> This alert box indicates a successful or positive action.
+</div> -->
+<!-- <div class="alert alert-danger fade in alert-dismissible show">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true" style="font-size:20px">×</span>
+  </button>    <strong>Alert!</strong> This alert box indicates a dangerous or potentially negative action.
+</div> -->
+    <div class="custom__container-wrapper">
+      <div class="dboard-inner">
+        <nav class="sb-topnav navbar navbar-expand custm__navbar--wrapper">
+          <a class="navbar-brand text-center" href="index.html"
+            ><img src="assets/img/logo.png" alt=""
+          /></a>
+          <button  class="btn btn-link btn-sm order-1 order-lg-0 btn__toggle__two"  id="sidebarToggle"  href="#!"  >
+            <i class="fas fa-bars"></i>
+          </button>
+          <!-- Navbar Search-->
+          <div class="flex__wrapper">
+            <form class="form__inner--wrapper">
+              <div class="input-group">
+                <div class="input-group-append">
+                  <button class="btn btn__border--zero serch" type="button">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+                <input
+                  class="form-control btn__border--zero"
+                  type="text"
+                  placeholder="Search for..."
+                  aria-label="Search"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+            </form>
+            <!-- Navbar-->
+            <div class="flex__wrapper--center">
+              <div class="mr__right-10">
+                <button type="button" class="btn">
+                  <i class="fa fa-bell" aria-hidden="true"></i>
+                  
+                </button>
+              </div>
+              <div class="dropdown">
+                <img
+                  class="dropdown-toggle"
+                  src="assets/img/profile.png"
+                  alt=""
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                />
+
+                <div
+                  class="dropdown-menu dropdown__menu-right"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <a class="dropdown-item" href="#"><i class="fas fa-cog pr-2"></i> Settings</a>
+                  <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt pr-2"></i> Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div id="layoutSidenav">
+          <div id="layoutSidenav_nav">
+            <nav
+              class="sb-sidenav accordion sidebar--gradient"
+              id="sidenavAccordion"
+            >
+              <div class="sb-sidenav-menu">
+                <div class="nav">
+                  <div class="text-center mr-top-2">
+                    <img
+                      class="dashboard-icon-border"
+                      src="assets/img/dashboard-profile.png"
+                      alt=""
+                    />
+                    <p class="heading-wrapper--one">Scarlett Johansson</p>
+                    <p class="label__wrapper--one">Steven tailr</p>
+                  </div>
+
+                  <a class="nav-link active" href="index.html">
+                    <div class="sb-nav-link-icon">
+                      <i class="fa fa-tachometer-alt" aria-hidden="true"></i>
+                    </div>
+                    Dashboard
+                  </a>
+
+                  <a class="nav-link" href="tables.html">
+                    <div class="sb-nav-link-icon">
+                      <i class="fa fa-key" aria-hidden="true"></i>
+                    </div>
+                    Getting Start
+                  </a>
+                  <a class="nav-link" href="charts.html">
+                    <div class="sb-nav-link-icon">
+                      <i class="fa fa-id-card" aria-hidden="true"></i>
+                    </div>
+                    Trade Setting
+                  </a>
+
+
+                  <a class="nav-link" href="charts.html">
+                    <div class="sb-nav-link-icon">
+                      <i class="fa fa-cogs" aria-hidden="true"></i>
+                    </div>
+                   Account Settings
+                  </a>
+                  
+              
+                 
+                
+                  <a class="nav-link" href="tables.html">
+                    <div class="sb-nav-link-icon">
+                      <i class="fa fa-comment" aria-hidden="true"></i>
+                    </div>
+                    Contact us
+                  </a>
+                  <a class="nav-link" href="tables.html">
+                    <div class="sb-nav-link-icon">
+                      <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </div>
+                    Login
+                  </a>
+                 
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div id="layoutSidenav_content">
+            <main>
+              <div class="container-fluid">
+                <h1 class="mt-4 title-dashboard">Dashboard</h1>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-xl-3 col-md-3">
+                        <div class="card card__one--wrapper text-white mb-4">
+                          <div class="card-body">
+                            <div class="flex__wrapper-two">
+                              <div>
+                                <p class="card-label-one">New Visitor</p>
+                                <h3 class="card-heading-one">3343</h3>
+                              </div>
+                              <div>
+                                <img src="assets/img/line-chart.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-md-3">
+                        <div class="card card__two--wrapper text-white mb-4">
+                          <div class="card-body">
+                            <div class="flex__wrapper-two">
+                              <div>
+                                <p class="card-label-one">New Visitor</p>
+                                <h3 class="card-heading-one">3343</h3>
+                              </div>
+                              <div>
+                                <img src="assets/img/line-chart.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-md-3">
+                        <div class="card card__three--wrapper text-white mb-4">
+                          <div class="card-body">
+                            <div class="flex__wrapper-two">
+                              <div>
+                                <p class="card-label-one">New Visitor</p>
+                                <h3 class="card-heading-one">3343</h3>
+                              </div>
+                              <div>
+                                <img src="assets/img/line-chart.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="card-body">Success Card</div> -->
+                          <!-- <div class="card-footer d-flex align-items-center justify-content-between">
+                                            <a class="small text-white stretched-link" href="#">View Details</a>
+                                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        </div> -->
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-md-3">
+                        <div class="card card__four--wrapper text-white mb-4">
+                          <div class="card-body">
+                            <div class="flex__wrapper-two">
+                              <div>
+                                <p class="card-label-one">New Visitor</p>
+                                <h3 class="card-heading-one">3343</h3>
+                              </div>
+                              <div>
+                                <img src="assets/img/line-chart.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="card-body">Danger Card</div> -->
+                          <!-- <div class="card-footer d-flex align-items-center justify-content-between">
+                                            <a class="small text-white stretched-link" href="#">View Details</a>
+                                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        </div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-xl-8 col-md-8 p-0">
+                        <div class="graph__wrapper-width">
+                          <img
+                            class="img-fluid"
+                            src="assets/img/graph.png"
+                            alt=""
+                          />
+                        </div>
+                        <!-- <div class="card mb-4">
+                                          <div class="card-header">
+                                              <i class="fas fa-chart-area mr-1"></i>
+                                              Area Chart Example
+                                          </div>
+                                          <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas>
+                                          </div>
+                                      </div> -->
+                      </div>
+                      <div class="col-md-4 visitors-loc">
+                        <div class="sidebar--box h-100">
+                          <h3>Visitor Locations</h3>
+                          <img
+                            class="img-fluid"
+                            src="assets/img/graph2.png"
+                            alt=""
+                          />
+                          <div class="margin__fourty">
+                            <h4 class="sidebar-heading-two">unique visitors</h4>
+                            <p class="sidebar-label-two">Last Week Rise by 62%</p>
+                            <div class="progress progress__line">
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                            
+                            <div>
+                              <h4 class="sidebar-heading-two">unique visitors</h4>
+                              <p class="sidebar-label-two">Last Week Rise by 62%</p>
+                              <div class="progress progress__line">
+                                <div
+                                  class="progress-bar"
+                                  role="progressbar"
+                                  style="width: 50%"
+                                  aria-valuenow="50"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-4 col-md-12">
+                        <div class="card-header bg-transparent border__none table__title--one">
+                          Revenue Generated
+                        </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table
+                              class="table"
+                              id="dataTable"
+                              width="100%"
+                              cellspacing="0"
+                            >
+                              <thead>
+                                <tr>
+                                  <th class="table__border--none">Name</th>
+                                  <th class="table__border--none">Earnings</th>
+                                  <th class="table__border--none">Sale</th>
+                                  <th class="table__border--none">Status</th>
+                                  <th class="table__border--none">Progress</th>
+                                  <th class="table__border--none">Type</th>
+                                  <th class="table__border--none">Added On</th>
+                                </tr>
+                              </thead>
+                              <!-- <tfoot>
+                                                  <tr>
+                                                      <th class="table__border--none">Name</th>
+                                                      <th class="table__border--none">Earnings</th>
+                                                      <th class="table__border--none">Sale </th>
+                                                      <th class="table__border--none">Status</th>
+                                                      <th class="table__border--none">Progress</th>
+                                                      <th class="table__border--none">Type</th>
+                                                      <th class="table__border--none">Added On</th>
+      
+                                                  </tr>
+                                              </tfoot> -->
+                              <tbody>
+                                <tr>
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/profile.png"
+                                      alt=""
+                                    />
+                                    Gill Blake
+                                  </td>
+                                  <td class="table__border--none">$39399</td>
+                                  <td class="table__border--none">45000</td>
+                                  <td class="table__border--none">
+                                    <button class="btn btn-secondary">
+                                      Approved
+                                    </button>
+                                  </td>
+      
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/Layer80.png"
+                                      alt=""
+                                    />
+                                  </td>
+                                  <td class="table__border--none">Premium</td>
+                                  <td class="table__border--none">2011/04/25</td>
+                                </tr>
+      
+                                <tr>
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/profile.png"
+                                      alt=""
+                                    />
+                                    Gill Blake
+                                  </td>
+                                  <td class="table__border--none">$39399</td>
+                                  <td class="table__border--none">45000</td>
+                                  <td class="table__border--none">
+                                    <button class="btn btn-secondary">
+                                      Approved
+                                    </button>
+                                  </td>
+      
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/Layer80.png"
+                                      alt=""
+                                    />
+                                  </td>
+                                  <td class="table__border--none">Premium</td>
+                                  <td class="table__border--none">2011/04/25</td>
+                                </tr>
+                                <tr>
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/profile.png"
+                                      alt=""
+                                    />
+                                    Gill Blake
+                                  </td>
+                                  <td class="table__border--none">$39399</td>
+                                  <td class="table__border--none">45000</td>
+                                  <td class="table__border--none">
+                                    <button class="btn btn-secondary">
+                                      Approved
+                                    </button>
+                                  </td>
+      
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/Layer80.png"
+                                      alt=""
+                                    />
+                                  </td>
+                                  <td class="table__border--none">Premium</td>
+                                  <td class="table__border--none">2011/04/25</td>
+                                </tr>
+                                <tr>
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/profile.png"
+                                      alt=""
+                                    />
+                                    Gill Blake
+                                  </td>
+                                  <td class="table__border--none">$39399</td>
+                                  <td class="table__border--none">45000</td>
+                                  <td class="table__border--none">
+                                    <button class="btn btn-secondary">
+                                      Approved
+                                    </button>
+                                  </td>
+      
+                                  <td class="table__border--none">
+                                    <img
+                                      class="img-fluid"
+                                      src="assets/img/Layer80.png"
+                                      alt=""
+                                    />
+                                  </td>
+                                  <td class="table__border--none">Premium</td>
+                                  <td class="table__border--none">2011/04/25</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                
+              </div>
+            </main>
+            <footer class="py-3 bg-light mt-auto">
+              <div class="container-fluid">
+                <div
+                  class="d-flex align-items-center justify-content-between small"
+                >
+                  <div class="text-muted">
+                    2021 © All rights reserved by Business
+                  </div>
+                  <div>
+                    <p class="m-0">
+                      Designed & Developed by<a target="_blank" href="https://leadconcept.com/">
+                        LEADconcept</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="js/jquery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="assets/demo/Chart.min.js"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <!-- <script
+      src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <!-- <script
+      src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/demo/datatables-demo.js"></script>
+    <script>
+    $(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+});
+    </script>
+  </body>
+</html>
